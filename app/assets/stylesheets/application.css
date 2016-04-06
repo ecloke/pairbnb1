@@ -1,15 +1,65 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.thumbnail {
+  padding-top: 400px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: auto;
+  margin-top: 50px;
+  height:200px;
+}
+
+h1 {
+  position: absolute;
+ 
+  color: white;
+  font-size: 50px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%)
+}
+
+h2{
+  position: absolute;
+  left:35%;
+  top:54%;
+  color:white;
+  font-family:"Helvetica Neue", Helvetica,Arial;
+  font-size:18px;
+  text-align: center;
+}
+.overlay {
+  background-color: rgb(200, 200, 200);
+  transition-property: opacity;
+  transition-duration: 1s;
+  opacity: .5;
+}
+
+.overlay:hover {
+  transition-property: opacity;
+  transition-duration: 1s;
+  opacity: 0;
+}
+
+h3:hover + .overlay {
+  transition-property: opacity;
+  transition-duration: 1s;
+  opacity: 0;
+}
+
+.photo {
+  position: absolute;
+  object-fit: contain;
+  z-index: -5;
+  bottom: 0px;
+  left: 0px;
+  /*background-image: url("https://a1.muscache.com/airbnb/upcoming_reservations/2x1/5_keys.jpg");*/
+  /*width: 688px;*/
+  width: 100%;
+  /*height: 344px;*/
+}
